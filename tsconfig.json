@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "dtp-shared-utils": [
+        "dist/dtp-shared-utils"
+      ],
+      "dtp-shared-utils/*": [
+        "dist/dtp-shared-utils/*"
+      ]
+    }
   }
 }

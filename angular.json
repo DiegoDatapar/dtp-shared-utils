@@ -130,6 +130,41 @@
           }
         }
       }
+    },
+    "dtp-shared-utils": {
+      "root": "projects/dtp-shared-utils",
+      "sourceRoot": "projects/dtp-shared-utils/src",
+      "projectType": "library",
+      "prefix": "dsu",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/dtp-shared-utils/tsconfig.lib.json",
+            "project": "projects/dtp-shared-utils/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/dtp-shared-utils/src/test.ts",
+            "tsConfig": "projects/dtp-shared-utils/tsconfig.spec.json",
+            "karmaConfig": "projects/dtp-shared-utils/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/dtp-shared-utils/tsconfig.lib.json",
+              "projects/dtp-shared-utils/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "dtp-shared-utils-app"
